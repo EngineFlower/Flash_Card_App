@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jasmine/AndroidStudioProjects/flashCardApp2/app/src/main/res/drawable/icon_add.xml" value="0.2705" />
+        <entry key="..\:/Users/Jasmine/AndroidStudioProjects/flashCardApp2/app/src/main/res/layout/activity_add_card.xml" value="0.1" />
         <entry key="..\:/Users/Jasmine/AndroidStudioProjects/flashCardApp2/app/src/main/res/layout/activity_main.xml" value="0.2" />
       </map>
     </option>

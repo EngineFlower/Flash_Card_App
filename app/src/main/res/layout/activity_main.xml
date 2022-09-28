@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
 <!--Adds text for question-->
     <TextView
         android:id="@+id/flash_question"
@@ -24,6 +23,16 @@
         android:text="4062"
         android:textSize="40sp"
         android:visibility="invisible" />
+    <!--Adds button to add question-->
+
+    <ImageView
+        android:id="@+id/add_question_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/icon_add"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"/>
+
 
 
 </RelativeLayout>
