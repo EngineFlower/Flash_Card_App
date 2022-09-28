@@ -9,14 +9,22 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        //Attaches click event to flash_answer
+        //Attaches click event to question
         findViewById<View>(R.id.flash_question).setOnClickListener{
 
-            //Makes answer visible, after click
+            //Makes answer visible, after clicking question
             findViewById<View>(R.id.flash_answer).visibility = View.VISIBLE
 
             //makes question invisible after click
             findViewById<View>(R.id.flash_question).visibility = View.INVISIBLE
+        }
+        //Attaches click to answer
+        findViewById<View>(R.id.flash_answer).setOnClickListener{
+            //Makes question visible again
+            findViewById<View>(R.id.flash_question).visibility = View.VISIBLE
+
+            //Makes answer invisible
+            findViewById<View>(R.id.flash_answer).visibility = View.INVISIBLE
         }
     }
 }
