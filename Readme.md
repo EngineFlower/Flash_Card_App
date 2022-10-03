@@ -1,6 +1,6 @@
 ## Flash_Card_App
 
-## Lab 2
+## Lab 2_Template
 
 ### App Description
 `TODO://` Add app description
@@ -24,7 +24,7 @@
 - [ ] User can also enter multiple choice answers when creating a card
 - [ ] App is further styled and customized!
 
-## Lab 1
+## Lab 2
 
 ### App Description
 A study tool grocery store cashiers can use to learn PLUs (Price look-up codes) for vegetables.
