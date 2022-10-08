@@ -7,15 +7,6 @@
     android:layout_height="match_parent"
     tools:context=".AddCardActivity">
 
-
-
-    <!--Icon for save button-->
-
-    <!--Adds icon for exit button-->
-
-    <!--Adds text bar to enter in new question-->
-
-
     <ImageView
         android:id="@+id/save_button"
         android:layout_width="wrap_content"

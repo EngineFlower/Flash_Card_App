@@ -44,14 +44,19 @@ class MainActivity : AppCompatActivity() {
                 val answerText = findViewById<TextView>(R.id.flash_answer)
                 answerText.text = string2
 
+                if (!string1.isNullOrEmpty() && !string2.isNullOrEmpty()){
+                   //TODO: FlashcardDatabase.insertCard(Flashcard(string1, string2))
+                }
+
+
+
             } else {
                 Log.i("MainActivity", "Returned null data from AddCardActivity")
             }
         }
 
         //Adds click listener that takes user to add_card_activity
-        findViewById<View>(R.id.add_question_button).setOnClickListener{
-            val intent = Intent(this, AddCardActivity::class.java)
+        findViewById<View>(R.id.add_question_button).setOnClickListener{ val intent = Intent(this, AddCardActivity::class.java)
                 resultLauncher.launch(intent)
 
 
