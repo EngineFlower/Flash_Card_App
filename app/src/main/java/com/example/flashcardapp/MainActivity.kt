@@ -7,13 +7,46 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import com.google.android.material.snackbar.Snackbar
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var flashcardDatabase: FlashcardDatabase
+    var allFlashcards = mutableListOf<Flashcard>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        flashcardDatabase = FlashcardDatabase(this)
+        allFlashcards = flashcardDatabase.getAllCards().toMutableList()
 
+        findViewById<View>(R.id.next_question_button).setOnClickListener {
+            var currentCardDisplayedIndex = 0
+            // advance our pointer index so we can show the next card
+            currentCardDisplayedIndex++
+            // don't try to go to next card if you have no cards to begin with
+            if (allFlashcards.size == 0) {
+                // return here, so that the rest of the code in this onClickListener doesn't execute
+                return@setOnClickListener
+            }
+
+
+            // make sure we don't get an IndexOutOfBoundsError if we are viewing the last indexed card in our list
+            if(currentCardDisplayedIndex >= allFlashcards.size) {
+                Snackbar.make(
+                    findViewById<TextView>(R.id.flash_question), // This should be the TextView for displaying your flashcard question
+                    "You've reached the end of the cards, going back to start.",
+                    Snackbar.LENGTH_SHORT)
+                    .show()
+                currentCardDisplayedIndex = 0
+            }
+            val (question, answer) = allFlashcards[currentCardDisplayedIndex]
+
+            findViewById<TextView>(R.id.flash_answer).text = answer
+            findViewById<TextView>(R.id.flash_question).text = question
+        }
+        if (allFlashcards.size > 0) {
+            findViewById<TextView>(R.id.flash_question).text = allFlashcards[0].question
+            findViewById<TextView>(R.id.flash_answer).text = allFlashcards[0].answer
+        }
         //Attaches click event to question
         findViewById<View>(R.id.flash_question).setOnClickListener{
 
@@ -31,6 +64,7 @@ class MainActivity : AppCompatActivity() {
             //Makes answer invisible
             findViewById<View>(R.id.flash_answer).visibility = View.INVISIBLE
         }
+
         val resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             val data: Intent? = result.data
             if (data != null) { // Check that we have data returned
@@ -44,8 +78,12 @@ class MainActivity : AppCompatActivity() {
                 val answerText = findViewById<TextView>(R.id.flash_answer)
                 answerText.text = string2
 
-                if (!string1.isNullOrEmpty() && !string2.isNullOrEmpty()){
-                   //TODO: FlashcardDatabase.insertCard(Flashcard(string1, string2))
+                if (string1 != null && string2 != null){
+                   flashcardDatabase.insertCard(Flashcard(string1, string2))
+                    allFlashcards = flashcardDatabase.getAllCards().toMutableList()
+                }
+                else{
+                    Log.e("TAG", "Missing question or answer to input into database. Question is $string1 and answer is $string2")
                 }
 
 
