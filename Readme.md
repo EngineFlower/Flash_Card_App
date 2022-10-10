@@ -1,43 +1,35 @@
-## Flash_Card_App
-
-## Lab 2_Template
+## Lab 3 Template
 
 ### App Description
 `TODO://` Add app description
 
 ### App Walk-though
-`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README.
+`TODO://` Add the URL to your animated app walk-though `gif` in the image tag below. Make sure the gif actually renders and animates when viewing this README. (☝️ Remove this paragraph after after adding gif)
 
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. 
+<img src="YOUR_GIF_URL_HERE" width=200><br>
+
+`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
 
 ## Required
-- [ ] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
-- [ ] The 'Add Card Screen' has a cancel button to take the user back to the main screen
-- [ ] User can enter and submit a Question and Answer through the 'Add Card Screen'
-- [ ] User will see the card they just created on the main screen when they press the 'Save Button'
-- [ ] Push your progress to GitHub!
+- [ ] User can create a card and still see their created card when the app is relaunched.
+- [ ] User can create muliple cards and browse through all created cards
 
 ## Optional
-- [ ] User can edit a card
-- [ ] An error message is shown if the user doesn't enter both a Question and an Answer
-- [ ] A notification is shown if the card was created successfully
-- [ ] User can also enter multiple choice answers when creating a card
-- [ ] App is further styled and customized!
-
-## Lab 2
+- [ ] User can delete a card and no longer see it in their deck anymore
+- [ ] Flashcards are shown in random order instead of the order they were created in
+- [ ] User can edit a card and see the edit saved when they browse through their deck of cards
+- [ ] User can create flashcards with multiple answers and be able to browse through cards with multiple choice answers shown
+## Lab 3
 
 ### App Description
 A study tool grocery store cashiers can use to learn PLUs (Price look-up codes) for vegetables.
 
 ### App Walk-though
-<img src="http://g.recordit.co/AL5BQ7TcP8.gif" width=200><br>
+<img src="http://g.recordit.co/8wFjjxjG4k.gif" width=200><br>
 
 ## Required
-- [x] User can click on a ‘+’ button that takes the user to new ‘Add Card Screen’
-- [x] The 'Add Card Screen' has a cancel button to take the user back to the main screen
-- [x] User can enter and submit a Question and Answer through the 'Add Card Screen'
-- [x] User will see the card they just created on the main screen when they press the 'Save Button'
-- [x] Push your progress to GitHub!
+- [x] User can create a card and still see their created card when the app is relaunched.
+- [x] User can create muliple cards and browse through all created cards
 
 ## Optional
 - [ ] User can edit a card
