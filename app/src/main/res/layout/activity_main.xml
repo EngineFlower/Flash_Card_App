@@ -4,25 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:icon="@mipmap/ic_launcher">
 <!--Adds text for question-->
     <TextView
+        android:background="@drawable/solid_shape"
         android:id="@+id/flash_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
         android:text="What is the PLU for cucumber?"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:textColor="@color/white"/>
 
 <!--Adds text for answer & makes it invisible-->
     <TextView
+        android:background="@drawable/solid_shape2"
         android:id="@+id/flash_answer"
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:gravity="center"
         android:text="4062"
         android:textSize="40sp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:gravity="center|top"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:textSize="30sp"
+        android:textColor="@color/red_200"/>
     <!--Adds button to add question-->
 
     <ImageView
@@ -37,10 +51,12 @@
         android:id="@+id/next_question_button"
         android:layout_width="76dp"
         android:layout_height="58dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="470dp"
+        android:layout_marginStart="352dp"
+        android:layout_marginEnd="-17dp"
+        android:layout_marginBottom="466dp"
         android:src="@drawable/next_button" />
 
 
